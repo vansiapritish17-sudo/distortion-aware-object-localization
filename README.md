@@ -64,7 +64,9 @@ Applied to every image, with parameters drawn independently per image:
 Every image carries dark dots drawn from a 36-position canonical lattice at
 x, y ∈ {48, 80, 112, 144, 176, 208}. The pattern is deliberately **sparse and
 partially occluded**: each image shows a random subset, dot contrast and radius
-vary, and background-coloured patches remove further regions. Which positions
+vary, and background-coloured patches remove further regions. The patches are
+placed adversarially, covering the densest surviving cluster of dots rather than
+landing at random. Which positions
 are present is not disclosed, so establishing the correspondence between
 detected dots and lattice positions is part of the problem rather than a given.
 A documented minority of images — about 28% — carry only a handful of dots,
