@@ -63,8 +63,10 @@ partially occluded**: each image shows a random subset, dot contrast and radius
 vary, and background-coloured patches remove further regions. Which positions
 are present is not disclosed, so establishing the correspondence between
 detected dots and lattice positions is part of the problem rather than a given.
-The dots pass through the same warp as the objects and act as the per-image
-geometric reference.
+A documented minority of images — about 28% — carry only a handful of dots,
+making several lattice assignments consistent with the observations and the
+correspondence genuinely ambiguous. The dots pass through the same warp as the
+objects and act as the per-image geometric reference.
 
 ## Generation and reproducibility
 
