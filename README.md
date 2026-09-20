@@ -4,7 +4,7 @@ A synthetic computer-vision dataset for object localisation under **per-image**
 nonlinear camera distortion.
 
 Each image is rendered from a canonical 256×256 scene containing six fixed
-object slots and a 6×6 calibration dot grid, then warped by an imaging model
+object slots and a sparse calibration pattern, then warped by an imaging model
 whose parameters are redrawn for every image. The released images are the warped
 ones; the labels are the canonical, pre-warp bounding boxes.
 
@@ -55,11 +55,16 @@ Applied to every image, with parameters drawn independently per image:
    model, and it is what bounds the achievable accuracy.
 4. **Sensor noise** — Gaussian, σ = 4.
 
-## Calibration grid
+## Calibration pattern
 
-Every image carries 36 dark dots (RGB ≈ (35, 35, 35), radius ≈ 2.4 px) whose
-canonical centres are x, y ∈ {48, 80, 112, 144, 176, 208}. They pass through the
-same warp as the objects and act as the per-image geometric reference.
+Every image carries dark dots drawn from a 36-position canonical lattice at
+x, y ∈ {48, 80, 112, 144, 176, 208}. The pattern is deliberately **sparse and
+partially occluded**: each image shows a random subset, dot contrast and radius
+vary, and background-coloured patches remove further regions. Which positions
+are present is not disclosed, so establishing the correspondence between
+detected dots and lattice positions is part of the problem rather than a given.
+The dots pass through the same warp as the objects and act as the per-image
+geometric reference.
 
 ## Generation and reproducibility
 
