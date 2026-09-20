@@ -24,8 +24,8 @@ perform.
 | test | 240 | 1,440 (held out) | 240 (held out) |
 
 Each image carries two targets: the six canonical pre-warp bounding boxes, and a
-36-character mask recording which canonical lattice positions carry a dot that is
-visible in the released image.
+36-character string recording the marker class at each canonical lattice
+position (absent, dark, mid or light).
 
 Labels use one row per object:
 
