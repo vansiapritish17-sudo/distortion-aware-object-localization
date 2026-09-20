@@ -18,10 +18,14 @@ perform.
 
 ## Contents
 
-| Split | Images | Labelled boxes |
-|---|---|---|
-| train | 600 | 3,600 |
-| test | 240 | 1,440 (held out) |
+| Split | Images | Labelled boxes | Lattice masks |
+|---|---|---|---|
+| train | 600 | 3,600 | 600 |
+| test | 240 | 1,440 (held out) | 240 (held out) |
+
+Each image carries two targets: the six canonical pre-warp bounding boxes, and a
+36-character mask recording which canonical lattice positions carry a dot that is
+visible in the released image.
 
 Labels use one row per object:
 
