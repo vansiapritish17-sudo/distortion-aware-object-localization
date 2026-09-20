@@ -20,7 +20,7 @@ perform.
 
 | Split | Images | Labelled boxes |
 |---|---|---|
-| train | 800 | 4,800 |
+| train | 600 | 3,600 |
 | test | 240 | 1,440 (held out) |
 
 Labels use one row per object:
